@@ -43,7 +43,18 @@ while (i <= 100) {
   else console.log(i);
   i++;
 }
-
+//Mi version
+let num: number = 1;
+for (let i: number = 0; i <= 99; i++) {
+  
+  if(num%3==0){
+   console.log("Fizz");
+  }else if(num%5==0){
+      console.log("Buzz");
+  }else
+  console.log(num);
+  num = num + 1;
+}
 
 // Write a program that creates a string that represents an 8×8 grid,
 // using newline characters to separate lines.
