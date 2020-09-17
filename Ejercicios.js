@@ -9,11 +9,12 @@
  * #######
  */
 
-let line: string = "#";
-for (let i: number = 1; i <= 7; i++) {
-  console.log(line);
-  line += "#";
+let triangle: string = "#";
+for (let i: number = 0; i <= 6; i++) {
+  console.log(triangle);
+  triangle = triangle + "#";
 }
+  
 
 // Write a program that uses console.log to print all the numbers from 1 to 100, with two exceptions.
 // For numbers divisible by 3, print "Fizz" instead of the number,
