@@ -25,3 +25,15 @@ Definir variables. 3 formas:
  -let a:string= "hola"; //usar esta seguramente
  -let a:string= 'hola';
  -let a:string= '''hola'''; -> "ho/nla"
+
+---FUNCIONES---
+Se asigna la función a una variable, es decir:
+const foo = function(a,b){ 
+ return a + b;
+}
+foo(3,4) // 7
+
+cuando solo es una linea y es el valor de retorno
+const f = (a,b) => a+b;
+
+
