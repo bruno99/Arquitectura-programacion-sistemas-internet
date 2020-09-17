@@ -55,7 +55,17 @@ for (let i: number = 0; i <= 99; i++) {
   console.log(num);
   num = num + 1;
 }
-
+//igual pero si son multiplos de ambos sale fizzbuzz
+let i: number = 1;
+let  cad:string | undefined;
+while(i<= 100){
+    cad = undefined;
+    if(i%3===0) cad = "fizz";
+    if(i%5===0) cad = (cad || "" ) + "buzz";
+console.log(cad||i);
+i++
+}
+  
 // Write a program that creates a string that represents an 8×8 grid,
 // using newline characters to separate lines.
 // At each position of the grid there is either a space or a "#" character.
