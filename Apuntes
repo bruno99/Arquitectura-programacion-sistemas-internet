@@ -1,0 +1,13 @@
+----Sesión 1----
+Backend -> El lenguaje de programación da igual. (Java, php, phyton,ruby...) Usaremos JavaScript con Typescript (JS/TS) 
+JavaScript se inventó para el frontend (backend se programaba en otra cosa), surgió Node.js (este año verenmos Deno,js que permitía programar el backend en JS y así 
+todo el stack (back y front) se puede programar en JS, lo que facilita.
+Usaremos:
+   -JS/TS moderno (a partir de ES6 de 2015)
+   -Node.js-> Deno.js (el intérprete) deno no se usa demasiado actualmente, pero parece que va a ser el futuro.
+   -Mongo (base de datos) es NoSQL, es decir no relacional (más moderno y ágil)
+   -GRAPHQL-> En el back como servidor y en el front como cliente (surgió de Facebook hace poco pensado para optimizar consumo de datos y batería enfocado a los móviles)
+JS necesita mantener retrocompatibilidad.
+TS es JS tipado (si en JS a= 5, en TS a:number=5).Hay una cosa llamada transpilador que traduce mi código a JS, el transpilador va a comporbar que todos 
+los tipos están bien puestos, pero el código que se ejecuta es de TS. Es decir, TS es un JS para asegurarse de que los tipos están bien puestos.
+JSON es un formato de objeto de texto que permite almacenar cualquier tipo de infromación. Mongo guarda en JSON.
