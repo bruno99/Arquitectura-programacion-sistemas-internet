@@ -35,14 +35,7 @@ while (i <= 100) {
   i++;
 }
 
-i = 1;
-while (i <= 100) {
-  if (i % 15 === 0) console.log("FizzBuzz");
-  else if (i % 3 === 0) console.log("Fizz");
-  else if (i % 5 === 0) console.log("Buzz");
-  else console.log(i);
-  i++;
-}
+
 //Mi version
 let num: number = 1;
 for (let i: number = 0; i <= 99; i++) {
@@ -63,6 +56,15 @@ while(i<= 100){
     if(i%3===0) cad = "fizz";
     if(i%5===0) cad = (cad || "" ) + "buzz";
 console.log(cad||i);
+  //
+  i = 1;
+while (i <= 100) {
+  if (i % 15 === 0) console.log("FizzBuzz");
+  else if (i % 3 === 0) console.log("Fizz");
+  else if (i % 5 === 0) console.log("Buzz");
+  else console.log(i);
+  i++;
+}
 i++
 }
   
@@ -89,6 +91,14 @@ for (let i: number = 0; i < 8; i++) {
   if (i % 2 === 0) thisline = " ";
   thisline += line;
   console.log(thisline);
+}
+
+//
+
+const cadena: string = "# # # #";
+for(let i=0; i<8; i++){
+    if(i%2==0) console.log(" " + cadena);
+    else console.log(cadena);
 }
 
 
