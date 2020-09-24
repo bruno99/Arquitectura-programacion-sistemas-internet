@@ -158,7 +158,7 @@ console.log(countChar("parras", "a"));
  console.log(greetInItalian("Bruno"));
  console.log(greetInSpanish("Agus"));
 
-//funcion que recorra un array de numeros y ejecutar otra funcion que le pase como parametro y la imprima
+//ejemplo funcion foreach que recorra un array de numeros y ejecutar otra funcion que le pase como parametro y la imprima
  const a:number[] = [1,2,3,4,5,3,6,4,1,7];
 
  const mostraPantalla = (num:number):void => console.log(num);
@@ -175,3 +175,54 @@ for_each(a, mostraPantalla);
 for_each(a, (num:number)=> {
     if(num%2 === 0) console.log(num);
 });
+//ejemplo de funcion map que dobal array y hace los pares flip y los impares flop
+const a: number[] = [1,2,3,4,5];
+
+const map = (arr: any[], f: Function):any[] => {
+    const returnArr = [];
+    for(let i=0; i<arr.length; i++){
+       returnArr.push(f(arr[i]));
+    }
+    return returnArr;
+}
+const b: number[] = map(a, (num:number) => 2*num)); 
+//b->[2,4,6,8,10]
+const c: string[] = map(a, (num:number)=> {
+    if(num%2 === 0) return "flip";
+    return "flop";
+})
+//c->[flop,flip,flop,flip,flop]
+console.log(b);
+console.log(c);
+
+//ejemplo de funcion filter
+const a : number[] = [1,2,3,4,5];
+
+const filter = (arr: any[], f:Function): any[] => {
+    const result = [];
+    for(let i=0; i<arr.length; i++){
+        if(f(arr[i])) result.push(arr[i]);
+    }
+    return result;
+}
+
+const b= filter(a,(num:number)=> num>3);
+//b->[4,5]
+const c= filter(a, (num:number) => num%2===0);
+//c -> [2,4]
+console.log(b);
+console.log(c);
+
+//modificar filter para que no soo reciba el valor si no tambien el indice
+const a : number[] = [1,2,3,4,5];
+const filter = (arr: any[], f:Function): any[] => {
+    const result = [];
+    for(let i=0; i<arr.length; i++){
+        if(f(arr[i],i)) result.push(arr[i]);
+    }
+    return result;
+}
+const d = filter(a,(num:number, index:number)=>{
+    return (num >2);
+})
+console.log(d); //[3,4,5]
