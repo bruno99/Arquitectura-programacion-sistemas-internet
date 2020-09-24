@@ -158,5 +158,20 @@ console.log(countChar("parras", "a"));
  console.log(greetInItalian("Bruno"));
  console.log(greetInSpanish("Agus"));
 
+//funcion que recorra un array de numeros y ejecutar otra funcion que le pase como parametro y la imprima
+ const a:number[] = [1,2,3,4,5,3,6,4,1,7];
 
+ const mostraPantalla = (num:number):void => console.log(num);
 
+ const for_each = (arr: number[], f:Function) => {
+     for(let i=0; i<arr.length; i++){
+         f(arr[i]);
+     }
+ }
+
+for_each(a, mostraPantalla);
+//igual pero imprimir los pares
+
+for_each(a, (num:number)=> {
+    if(num%2 === 0) console.log(num);
+});
