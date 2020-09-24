@@ -36,4 +36,17 @@ foo(3,4) // 7
 cuando solo es una linea y es el valor de retorno
 const f = (a,b) => a+b;
 
+Una función es una variable tipicamente constante 
+const suma = (a:number, b:number): number =>{ return a+b;}
+suma(3,4) -> 7
+suma("hola", "que tal");->esto en typescript da error, en javascript da hola que tal porque no se pondría lo de number
+Tipar te garantiza que no vayan a suceder cosas como lo de hola que tal, a no ser que quieras, entonces ponddrias (a:number|string)
+
+CLOSURE //cuando una funcion devuelve otra se lleva consigo los valores
+const multiplyBy =(n:number) => {
+  return (a:number) => n*a; //está devolviendo uns funcion que toma como parametro un numero y devuelve n*a
+}
+const double = multiplyBy(2); //double es 2*a porque se lleva el 2 y entonces n=2
+ double(3)->6
+
 
