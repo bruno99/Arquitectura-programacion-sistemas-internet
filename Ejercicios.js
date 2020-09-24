@@ -138,3 +138,25 @@ const countChar = (str: string, c: string) => {
 };
 
 console.log(countChar("parras", "a"));
+
+
+
+//Funcion generadora de saludos en diferentes idiomas con closure
+
+ const greetInLang = (greet: string) =>{
+     const f = (name: string): string => {
+         return greet + name;
+     }
+     return f;
+ }
+
+ const greetInItalian = greetInLang("Ciao ");
+ const greetInEnglish = greetInLang("Hello ");
+ const greetInSpanish = greetInLang("Hola ");
+
+ console.log(greetInEnglish("Rocio"));
+ console.log(greetInItalian("Bruno"));
+ console.log(greetInSpanish("Agus"));
+
+
+
