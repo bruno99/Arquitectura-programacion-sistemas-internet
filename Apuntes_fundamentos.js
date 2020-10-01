@@ -124,7 +124,8 @@ a.map ( value => 2*value) //creo otro array del doble
    
 //SLICE Y SPLICE
    
-//OBJETOS   
+-----OBJETOS----
+   
 json-> asociar claves a valores 
 
    const persona={
@@ -186,7 +187,34 @@ a.name===b.name; // true
 a.numeros ===b.numeros; //false
 a.perro.name = b.perro.name; //true
 
-
+ ------TIPAR LOS OBJETOS---- (interface)
+   
+   interface IPersona{
+      name: string;
+      edad: number;
+      coche?: boolean; //el interrogante significa que puede que tenga coche y puede que no
+      
+   }
+   const persona1: IPersona = {
+      name: "Alberto",
+      edad: 18,
+      coche: true;
+   }
+   const persona2: IPersona = {
+      name: "Esteban",
+      edad: 123, 
+      //no ponemos coche por la interrogacion
+      
+   }
+      //si no usasemos la interrogacion pondriamos
+      const persona2: Partial<IPersona> //de esta forma esteban es una "casi" persona, el problema es que entonces no sabemos qué valor le puede faltar
+      se puede solucionar de 3 formas:
+   const a: string | undefind = persona2.name; 
+   const a:string = persona2.name || "nombre por defecto";
+   const a: boolean = persona1.coche!; //la exclamacion es que asegures que persona 1 tiene coche. SI hubiesemos puesto persona 2 petaria
+   
+      
+   
    
    
    
