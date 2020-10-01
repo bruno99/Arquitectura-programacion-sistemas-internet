@@ -77,9 +77,60 @@ const double = (arr:number[])=>{
  for.....b{i] = 2* arr[i]
           }
 const c= double(a); //->a=[2,4,6]
-a===b//esto seria false porque las referencias son distintas aunque los valores sean los mismos                                       
-                                            
+a===b//esto seria false porque las referencias son distintas aunque los valores sean los mismos        
+   
+EN JAVASCRIPT TODO SON REFERENCIAS
+EJ/   
+const a = [[1,2], [3,4], [1,5]]; //esto es un array de arrays
+a[0]; //esto seria [1,2]
+const c = a.slice(0); //hace una copia de a en c. a NO = c, pero a[0]===c[0] porque es una copia de la referencia 
+Desecstructurar un array = hace una copia de los elementos y los separa, expande el array
+const a=[1,2,3]
+const b= [...a];
+console.log(b); //a!=b Mismos valores pero distintas referencia
+const c=[...a,...b]; //c=[1,2,3,1,2,3]
+const [h,...i] = [...a ];//Declarar variables sueltas a partir d un array
+console.log(h); //1
+console.log(h);  //[2,3]
 
+   //calcula el maximo con ...
+const max = (...numbers:number[]):number=> {
+   let num= 0;
+   for(let num of numbers){
+      if(i>num) num = i;
+   }
+   return num;
+  max(1,2,3,4,5,6); //no necesitas pasarlo en array porque hemos usado los paraemtros desestructurados y los convierte en array 
+  
+//sacar el array del doble del numero mas el anterior   
+ const a: number [] = [1,2,3,4,5];
+ a.forEach( (value, index) => { //para cada elemento de a ejecuto f recibiendo como parametro value e index
+    console.log(2*value + index);
+ })
+   
+   //sacar los pares
+    const a: number [] = [1,2,3,4,5];
+ a.forEach( (value) => {
+    if(value%2===0)
+    console.log(value);
+ })
+   
+   
+ //los mayores de 10 del resultados al multiplicar todos por 2
+  const a: number [] = [1,2,5,7,8];
+a.map ( value => 2*value) //creo otro array del doble
+.filter(value => value > 10) //creo otro array con los mayores de 10
+.forEach(value => console.log(value)); //los imprimo
+   
+//SLICE Y SPLICE
+   
+   
+   
+   
+   
+   
+  
+                        
 
 
 
