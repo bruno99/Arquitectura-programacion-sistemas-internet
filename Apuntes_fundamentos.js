@@ -124,8 +124,69 @@ a.map ( value => 2*value) //creo otro array del doble
    
 //SLICE Y SPLICE
    
-   
-   
+//OBJETOS   
+json-> asociar claves a valores 
+
+   const persona={
+   nombre: "Bruno",
+   edad: 20,
+   amigos: [
+      {
+         nombre:"Agus", 
+         edad:21,
+      },
+      {
+          nombre:"Ro", 
+          edad:20,
+      },
+   ],
+}
+const printconsole = (obj) => {
+   console.log(`nombre: ${obj.nombre}`);
+   console.log(`edad: ${obj.edad}`);
+   obj.amigos.forEach(amigo=>{
+      console.log(`nombre: ${amigo.nombre}`);
+   console.log(`edad: ${amigo.edad}`);
+   })
+}
+
+Puedo hacer b.name que es lo mismo que b["name"];
+ Cuando no es solo una palabra la clave va entre comillas: 
+   const c= {"nombre y apellidos": "Bruno Urban",}
+   Y accedo a ella como un array
+
+ const persona = {
+      nombre: "Bruno",
+      edad: 20
+   }
+   Object.keys(persona).forEach( key =>{ 
+      console.log(`${key}: ${persona[key]}`)
+   });
+   typeof persona; 
+   if(typeof persona === "object"){
+
+   }
+   Array.isArray(arr)// true
+const a= {
+   name: "alberto",
+   numeros:[1,2,3],
+   perro:{
+      name: "Pippin"
+   }
+}
+const b= {
+   name: "alberto",
+   numeros:[1,2,3],
+   perro:{
+      name: "Pippin"
+}
+}
+
+a.name===b.name; // true
+a.numeros ===b.numeros; //false
+a.perro.name = b.perro.name; //true
+
+
    
    
    
