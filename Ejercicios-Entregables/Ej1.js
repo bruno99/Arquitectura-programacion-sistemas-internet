@@ -1,5 +1,5 @@
 
-*****SIN ACABAR****NO CORREGIR AUN*****
+
 
 Recibira 2 parametros y tiene que ir recibiendo cada uno de sus elementos y compararlos. Si es un basico lo compara y ya, si es un array entrara a cada uno de sus elementos.
 Importante e object keys, saber si es array y objeto pra entrar elemento a elemento
