@@ -239,9 +239,17 @@ a.perro.name = b.perro.name; //true
   //el programa deberia decir Hola Promesa rechazada    
   //se pueden enlazar promesas  
   
-  async/await= promesas de un modo más sencillo 
-  
-  
+  async/await= promesas de un modo más sencillo //es lo mismo que then
+  //todo lo que hay debajo del await forma parte del cuando se resuelva
+ 
+  try{
+     const loleido = await text;
+     console.log(loleido);
+     concole.log("hola");
+  }catch(e){
+     console.log("error");
+  }
+      console.log("perror");
   
    
    
