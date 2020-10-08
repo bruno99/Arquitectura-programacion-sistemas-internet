@@ -16,3 +16,8 @@ json.then((response)=> {
 }).then((jsonData) => {
   console.log(jsonData);
 });
+//Cual es el personaje que aparece en mas episodios?
+if(!obj[nombre])
+    obj[nombre]=0;
+else{
+     obj[nombre]++;
