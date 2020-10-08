@@ -213,8 +213,36 @@ a.perro.name = b.perro.name; //true
    const a:string = persona2.name || "nombre por defecto";
    const a: boolean = persona1.coche!; //la exclamacion es que asegures que persona 1 tiene coche. SI hubiesemos puesto persona 2 petaria
    
-      
+ //PROGRAMACION ASÍNCRONA
+  //instruccion asincrona: se lanza una serie de instrucciones que se ejecutan cuando las previas instrucciones se han hecho. Ejecuta pero no bloquea.
    
+  callback= ejecuto algo y cuando eso termine llamo a esta funcion. EJ/ setTimeout = ejecuta una funcion pasado un tiemo
+  setTimeout(f,3000); //vuelve dentro de 3 segudnos y luego ejecuta eso
+   //ej   
+  console.log("Empiezo");   
+  setTimeout( ()=> console.log("Han pasado 3 segundos"), 3000);    
+  console.log{"sigo"}; //esta linea saldra antes que el callback porque no bloquea    
+  //el callback solo se ejecuta cuando ha yerminado el programa principal    
+      
+  promesas = mando una instruccion y se "promete". Cuando la promesa se cumple e llama a la funcion
+  //ej
+  let a = 5;
+  const promesa = new Promise((resolve,reject) => {
+     setTimeout(() => resolve(), 2000);
+  })
+  promesa.then{ () => {
+     console.log{"Promesa resuelta"};
+  }},catch{ () => {
+     console.log{"Promesa rechazada"};
+  }}
+      console.log{"Hola"}; 
+  //el programa deberia decir Hola Promesa rechazada    
+  //se pueden enlazar promesas  
+  
+  async/await= promesas de un modo más sencillo 
+  
+  
+  
    
    
    
