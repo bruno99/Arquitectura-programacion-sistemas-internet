@@ -22,7 +22,13 @@ const printDeep = {obj: any} => {
    if(["string", "number", "boolean"].includes{typeof obj}}{
       console.log(obj);
     }
-   if(Array.isArray{obj}}{
+    else if(Array.isArray{obj}}{
       obj.forEach(elem => printDeep(elem)};
-   }
+   }else{
+      Object.keys(obj).forEach( key => {
+         console.log(key);
+         printDeep(obj[key]);
+      })
+   }  
 }   
+printDeep(obj);
