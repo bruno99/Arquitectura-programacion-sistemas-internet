@@ -32,3 +32,11 @@ const printDeep = {obj: any} => {
    }  
 }   
 printDeep(obj);
+
+
+
+
+
+
+
+
