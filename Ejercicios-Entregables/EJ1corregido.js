@@ -1,7 +1,7 @@
-//print
-const obj 0 {
-   name: "alberto",
-   edad: 20
+
+const obj = {
+   name: "Alberto",
+   edad: 20,
    amigos: [
        "Juan, "Maria", "Paula"
        ],
@@ -16,3 +16,13 @@ const obj 0 {
        },
      ]
   }   
+//print
+//si la clave es un tipo basico la imprimo, si es un array u objeto lo recorro y llamo recruivamente lo que hay dentro
+const printDeep = {obj: any} => {
+   if(["string", "number", "boolean"].includes{typeof obj}}{
+      console.log(obj);
+    }
+   if(Array.isArray{obj}}{
+      obj.forEach(elem => printDeep(elem)};
+   }
+}   
