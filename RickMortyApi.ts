@@ -32,12 +32,25 @@ interface IData {
 const url = "https://rickandmortyapi.com/api/episode?=1";
  
 let response = await Fetch(url);
-const data: IData = await response.json();
+let data: IData = await response.json();
+
+const episodes: IResult[] = data.results;
+
 
 while(data.info.next){
   response = await fetch(data.info.next);
   data = await response.json;
+  episodes.push(...data.results);
 }
+
+const characters:{ [key:string]:number } = {};
+
+episodes.forEach( ep => {
+  ep.characters.forEach( url => {
+    if (characters[url]) characters[url]++;
+    else characters[url] = 1;
+  });
+});
 
 console.log("done");
 
