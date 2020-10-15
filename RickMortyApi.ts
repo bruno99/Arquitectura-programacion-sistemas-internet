@@ -52,6 +52,22 @@ episodes.forEach( ep => {
   });
 });
 
+constchar: {
+  url: string,
+  num: number,
+} = { url: "", num: 0};
+  
+ Object.keys[characters].forEach(url: string => {
+  if(characters[url] > char.num){
+    char.url = url;
+    char.num = characters[url];
+  }
+});
+
+response = await fetch(char.url);
+const max = await response.json();
+console.log(max);
+
 console.log("done");
 
 
