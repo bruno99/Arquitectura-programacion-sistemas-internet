@@ -1,7 +1,8 @@
 import { MongoCLient} from "https://deno.land/x/mongo@v0.12.1/mod.ts";
 try{
 const client = new MongoClient();
-client.connectWithUrl("mongodb+srv://Bruno99:<PASSWORD>p@cluster0.hn1bb.gcp.mongodb.net/nebrija?retryWrites=true&w=majority");
+client.connectWithUrl("mongodb+srv://Bruno99:nebrija@cluster0.qb7tw.gcp.mongodb.net/cluster0?retryWrites=true&w=majority
+");
 
 interface UserSchema {
 _id: {Soid: string};
@@ -15,7 +16,7 @@ name: string;
 year: number;
 }
 
-const db = client.database('nebrija');
+const db = client.database('cluster0');
 const courses = db.collection<CoursesSchema>('CoursesCollection');
 
 const course: Partial<CoursesSchema> = {
@@ -25,4 +26,6 @@ const course: Partial<CoursesSchema> = {
 
 const insertCourse  = await courses.insertOne(course);
 
-}catch
+}catch(e)
+
+//replicar e la BD de mongo los datos de rick y morty, es decir, crear una coleccion, episodios, personajes y planetas
