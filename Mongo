@@ -1,0 +1,28 @@
+import { MongoCLient} from "https://deno.land/x/mongo@v0.12.1/mod.ts";
+try{
+const client = new MongoClient();
+client.connectWithUrl("mongodb+srv://Bruno99:<PASSWORD>p@cluster0.hn1bb.gcp.mongodb.net/nebrija?retryWrites=true&w=majority");
+
+interface UserSchema {
+_id: {Soid: string};
+name: string;
+pwd: string;
+};
+
+interface CoursesSchema {
+_id: {soid: string }; 
+name: string;
+year: number;
+}
+
+const db = client.database('nebrija');
+const courses = db.collection<CoursesSchema>('CoursesCollection');
+
+const course: Partial<CoursesSchema> = {
+  name: "EDA",
+  year: 1,
+};
+
+const insertCourse  = await courses.insertOne(course);
+
+}catch
