@@ -48,4 +48,28 @@ const types = gql
       },
     };
     
+ const GraphQLService = await applyGraphQL<Router>({
+  Router,
+  typeDefs: types,
+  resolvers: resolvers,
+  context: (ctx: RouterContext) => {
+    return { user: "Aaron" };
+  }
+})
+
+
+app.use(GraphQLService.routes(), GraphQLService.allowedMethods());
+
+console.log("Server start at http://localhost:4000");
+await app.listen({ port: 4000 });
+    
+    
+  //poner en buscador localhost:4000/graphql (el 4000 es por haberlo puesto en el codigo)
+    
+    query {
+      getUser(id: "12332323"):{
+        firstName
+        lastName
+     }
+  }
   
