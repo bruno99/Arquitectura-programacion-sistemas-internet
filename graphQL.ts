@@ -20,9 +20,32 @@ const types = gql
        done: Boolean
   }
   type Query {
-       getUser(id:String): User
+       getUser(id:String): User (no hay explamacion porque puede ser eso o indefinido)
   }
   type Mutation {
-       setUser(input: UserInput!): ResolveType!
+       setUser(input: UserInput!): ResolveType! (la exclamaciones que tiene que devolverme el objeto si o si)
   }      
+  const resolvers = {
+    Query: {
+      getUser: (parent: any, args: {id:string}, context: any, info: any) => {
+        return {
+          firstName: "Bruno",
+          lastName: "Urban",
+        }
+      },
+    },
+    Mutation: {
+      setUser: (
+        parent: any,
+        args: any,
+        context: any,
+        info: any
+        ) => {
+        console.log("input:", args.input.firstName, args.input.lastName);
+        return {
+          done: true,
+        };
+      },
+    };
+    
   
