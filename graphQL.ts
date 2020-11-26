@@ -38,10 +38,11 @@ const types = gql
       setUser: (
         parent: any,
         args: any,
-        context: any,
+        context: {users: IUser[]},
         info: any
         ) => {
-        console.log("input:", args.input.firstName, args.input.lastName);
+        const users: IUser[] = context.users;
+        users.push(args.input);
         return {
           done: true,
         };
