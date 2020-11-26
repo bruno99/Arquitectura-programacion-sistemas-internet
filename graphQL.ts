@@ -54,7 +54,7 @@ const types = gql
   typeDefs: types,
   resolvers: resolvers,
   context: (ctx: RouterContext) => {
-    return { user: "Aaron" };
+    return { user: "Bruno" };
   }
 })
 
